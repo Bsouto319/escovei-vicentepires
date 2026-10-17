@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escovei Vicente Pires — Cartão virtual</title>
+<meta name="theme-color" content="#e8175d">
+<link rel="icon" href="/img/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;min-height:100vh;background:linear-gradient(160deg,#c40f4c,#e8175d 55%,#ff5c8f);display:flex;justify-content:center;padding:28px 16px}
+.card{width:100%;max-width:400px;background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 24px 60px rgba(80,0,30,.35);text-align:center;align-self:flex-start}
+.top{height:150px;background:linear-gradient(rgba(196,15,76,.35),rgba(196,15,76,.7)),url(/img/p4.jpg) center 30%/cover}
+.logo{width:110px;height:110px;margin:-55px auto 0;border-radius:28px;object-fit:cover;border:5px solid #fff;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+h1{font-size:28px;font-weight:800;color:#e8175d;letter-spacing:-.5px;margin-top:10px;line-height:1.1}
+.sub{font-size:13px;color:#7a6a70;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+.tag{font-family:'Playfair Display',serif;font-style:italic;color:#1d1418;font-size:17px;margin:12px 22px 6px}
+.status{display:inline-flex;gap:7px;align-items:center;font-size:12.5px;font-weight:600;background:#fff1f5;border-radius:999px;padding:5px 12px;margin-bottom:18px;color:#1d1418}
+.status i{width:8px;height:8px;border-radius:50%;background:#aaa}.status.open i{background:#22c55e}
+.links{display:flex;flex-direction:column;gap:11px;padding:0 20px}
+.links a{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;font-weight:600;color:#1d1418;background:#fff;border:1.5px solid #f3dbe3;text-decoration:none;text-align:left}
+.links a small{display:block;font-weight:500;color:#7a6a70;font-size:12px}
+.links a.p{background:#e8175d;color:#fff;border-color:#e8175d}.links a.p small{color:#ffd6e4}
+.links a.ig{background:linear-gradient(45deg,#f9a825,#e91e63 45%,#8e24aa);color:#fff;border:none}.links a.ig small{color:#ffe3ef}
+.links .e{font-size:22px;width:28px;text-align:center}
+.hours{margin:18px 20px 0;background:#fff1f5;border-radius:18px;padding:14px 16px;font-size:13.5px;text-align:left;line-height:1.8}
+.share{display:flex;gap:10px;padding:18px 20px}
+.share button{flex:1;padding:13px;border-radius:14px;border:2px solid #e8175d;background:#fff;color:#e8175d;font:600 14px Poppins,sans-serif;cursor:pointer}
+.share button.f{background:#e8175d;color:#fff}
+.foot{font-size:11px;color:#a58f97;padding-bottom:18px}.foot a{color:#e8175d;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top"></div>
+  <img class="logo" src="/img/logo.jpg" alt="Escovei">
+  <h1>escovei</h1>
+  <div class="sub">Vicente Pires</div>
+  <p class="tag">O seu salão completo sem hora marcada 💗</p>
+  <span class="status" id="st"><i></i><span id="stt"></span></span>
+  <div class="links">
+    <a class="p" href="/#agendar"><span class="e">📅</span><span>Agendar horário<small>Escolha o dia e o horário online</small></span></a>
+    <a class="ig" href="https://www.instagram.com/escovei.vicentepires/" target="_blank"><span class="e">📸</span><span>@escovei.vicentepires<small>Fale com a gente pelo Instagram</small></span></a>
+    <a id="wa" target="_blank"><span class="e">💬</span><span>WhatsApp<small>Chame a gente</small></span></a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Escovei+Vicente+Pires" target="_blank"><span class="e">📍</span><span>Como chegar<small>Rua 10, Ch. 154/1 · ao lado do Sicoob</small></span></a>
+    <a href="https://g.page/r/CfNT-M255_PKEAE/review" target="_blank"><span class="e">⭐</span><span>Avalie a gente no Google<small>Sua opinião faz toda a diferença</small></span></a>
+    <a href="/"><span class="e">🌐</span><span>Nosso site<small>Serviços, fotos e avaliações</small></span></a>
+  </div>
+  <div class="hours">🕗 <b>Seg a sáb:</b> 08h às 20h<br>🕘 <b>Domingo:</b> 09h às 14h<br>⏱️ Sem hora marcada · ☕ Café e drinks por nossa conta</div>
+  <div class="share"><button class="f" onclick="share()">Compartilhar</button><button onclick="saveContact()">Salvar contato</button></div>
+  <p class="foot">Por <a href="https://btechsouto.shop" target="_blank">Btech Solution and Growth</a></p>
+</div>
+<script>
+const WHATS='5561998040067';
+document.getElementById('wa').href='https://api.whatsapp.com/send?phone='+WHATS+'&text='+encodeURIComponent('Olá! Vi o cartão virtual da Escovei e gostaria de atendimento 💗');
+const HRS={0:[9,14],1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,20]};
+(function(){const n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,[a,b]=HRS[d],o=h>=a&&h<b;document.getElementById('st').classList.toggle('open',o);document.getElementById('stt').textContent=o?`Aberto agora · até ${b}h`:(h<a?`Fechado · abre hoje às ${a}h`:`Fechado · abre amanhã às ${HRS[(d+1)%7][0]}h`)})();
+function share(){const d={title:'Escovei Vicente Pires',text:'Salão completo sem hora marcada em Vicente Pires 💗',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else{navigator.clipboard.writeText(location.href);alert('Link copiado!')}}
+function saveContact(){const v=`BEGIN:VCARD\nVERSION:3.0\nFN:Escovei Vicente Pires\nORG:Escovei Vicente Pires\nTEL;TYPE=CELL:+${WHATS}\nURL:${location.origin}\nADR:;;Rua 10 Ch 154/1 Lj 5/6;Vicente Pires;DF;;Brasil\nNOTE:Salão de beleza sem hora marcada. Seg a sáb 8h-20h, dom 9h-14h. Instagram @escovei.vicentepires\nEND:VCARD`;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Escovei-Vicente-Pires.vcf';a.click()}
+</script>
+</body>
+</html>
