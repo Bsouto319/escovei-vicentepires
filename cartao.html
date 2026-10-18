@@ -59,5 +59,6 @@ const HRS={0:[9,14],1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,20]};
 function share(){const d={title:'Escovei Vicente Pires',text:'Salão completo sem hora marcada em Vicente Pires 💗',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else{navigator.clipboard.writeText(location.href);alert('Link copiado!')}}
 function saveContact(){const v=`BEGIN:VCARD\nVERSION:3.0\nFN:Escovei Vicente Pires\nORG:Escovei Vicente Pires\nTEL;TYPE=CELL:+${WHATS}\nURL:${location.origin}\nADR:;;Rua 10 Ch 154/1 Lj 5/6;Vicente Pires;DF;;Brasil\nNOTE:Salão de beleza sem hora marcada. Seg a sáb 8h-20h, dom 9h-14h. Instagram @escovei.vicentepires\nEND:VCARD`;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Escovei-Vicente-Pires.vcf';a.click()}
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
