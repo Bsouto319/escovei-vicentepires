@@ -97,23 +97,13 @@ section{padding:90px 0}
 .steps{display:grid;gap:16px;margin-top:22px}
 .stp{display:flex;gap:14px}.stp span{width:34px;height:34px;flex:none;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-weight:700}
 .stp p{color:#c9b9bf;font-size:14px}
-.form{background:#fff;color:var(--ink);border-radius:26px;padding:28px 24px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
-.form h3{font-size:22px;font-weight:800}.form .fs{color:var(--mut);font-size:13.5px;margin-bottom:16px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.f{margin-bottom:14px}
-.f label{display:block;font-size:12px;font-weight:700;color:#4a3c42;margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px}
-.f input,.f textarea{width:100%;background:#fdf7f9;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;font:15px Poppins,sans-serif;color:var(--ink);outline:none}
-.f input:focus,.f textarea:focus{border-color:var(--pink);background:#fff}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip2{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:500;cursor:pointer;user-select:none;transition:all .15s}
-.chip2.on{background:var(--pink);border-color:var(--pink);color:#fff}
-.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:8px}
-.slot{border:1.5px solid var(--line);border-radius:12px;padding:9px 0;text-align:center;font-weight:600;font-size:14px;cursor:pointer;background:#fff}
-.slot.on{background:var(--pink);border-color:var(--pink);color:#fff}
-.slot.off{opacity:.3;pointer-events:none;text-decoration:line-through}
-.hint{font-size:13px;color:var(--mut)}
-.err{color:#d11a4f;font-size:13.5px;font-weight:600;min-height:20px}
-.sendrow{display:grid;grid-template-columns:1fr;gap:10px;margin-top:4px}
+.walk{background:#fff;color:var(--ink);border-radius:26px;padding:30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.35);text-align:center}
+.walk .big{font-size:46px;line-height:1}
+.walk h3{font-size:26px;font-weight:800;margin:10px 0 4px}
+.walk .fs{color:var(--mut);font-size:14.5px;margin-bottom:18px}
+.walk .today{background:var(--blush);border-radius:16px;padding:14px;margin-bottom:18px;font-weight:600}
+.walk .today small{display:block;color:var(--mut);font-weight:500;font-size:12.5px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:2px}
+.sendrow{display:grid;grid-template-columns:1fr;gap:10px}
 .sendrow .btn{width:100%;padding:15px}
 .small{font-size:12.5px;color:var(--mut);text-align:center}
 /* reviews */
@@ -156,7 +146,6 @@ footer a{color:var(--pink);font-weight:600}
  .perks{grid-template-columns:1fr 1fr;margin-top:24px}
  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
  section{padding:66px 0}
- .row{grid-template-columns:1fr}
  .fab{bottom:84px}
  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
  .mbar .btn{padding:12px 8px;font-size:14px}
@@ -167,18 +156,18 @@ footer a{color:var(--pink);font-weight:600}
 
 <header><div class="wrap nav">
   <a href="#" class="brand"><img src="/img/logo.jpg" alt="Logo Escovei"><div><b>escovei</b><small>Vicente Pires</small></div></a>
-  <nav><a href="#servicos">Serviços</a><a href="#fotos">Fotos</a><a href="#agendar">Agendar</a><a href="#avaliacoes">Avaliações</a><a href="#onde">Onde estamos</a></nav>
-  <div style="display:flex;gap:10px"><a class="btn btn-line sm hide-m" id="igTop" target="_blank" rel="noopener">Instagram</a><a class="btn btn-pink sm" href="#agendar">Agendar</a></div>
+  <nav><a href="#servicos">Serviços</a><a href="#fotos">Fotos</a><a href="#como-funciona">Como funciona</a><a href="#avaliacoes">Avaliações</a><a href="#onde">Onde estamos</a></nav>
+  <div style="display:flex;gap:10px"><a class="btn btn-line sm hide-m" id="igTop" target="_blank" rel="noopener">Instagram</a><a class="btn btn-pink sm" href="#onde">Como chegar</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap hg">
   <div class="rv">
     <span class="status" id="status"><span class="dot"></span><span id="stxt">Verificando horário…</span></span>
     <h1>O seu salão completo <em>sem hora marcada.</em></h1>
-    <p class="lead">Escova, corte, tratamentos, penteados, maquiagem, unhas e depilação em um só lugar. É só chegar, ou garantir seu horário em 1 minuto.</p>
+    <p class="lead">Escova, corte, tratamentos, penteados, maquiagem, unhas e depilação em um só lugar. Sem agendamento: é só chegar e ser atendida.</p>
     <div class="ctas">
-      <a class="btn btn-pink" href="#agendar"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Agendar horário</a>
-      <a class="btn btn-line" href="#onde"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
+      <a class="btn btn-pink" href="#onde"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Como chegar</a>
+      <a class="btn btn-line" href="#como-funciona"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Como funciona</a>
     </div>
     <div class="gbadge"><b>4,8</b><div><div class="st">★★★★★</div><small>293 avaliações no Google</small></div></div>
   </div>
@@ -199,13 +188,13 @@ footer a{color:var(--pink);font-weight:600}
 <section id="servicos" class="blush"><div class="wrap">
   <div class="head c rv"><span class="eyebrow">Nossos serviços</span><h2 class="h2">Tudo para você sair <em>diferente</em></h2><p class="sub">Escolha o que quer fazer hoje. Dá para combinar vários serviços na mesma visita.</p></div>
   <div class="svcs">
-    <div class="svc rv"><div class="e">💇‍♀️</div><h3>Escova</h3><p>A especialidade da casa: escova linda e duradoura, do jeito que você gosta.</p><a href="#agendar" data-s="Escova">Agendar →</a></div>
-    <div class="svc rv"><div class="e">✂️</div><h3>Corte</h3><p>Corte renovado para mudar o visual ou só manter as pontas em dia.</p><a href="#agendar" data-s="Corte">Agendar →</a></div>
-    <div class="svc rv"><div class="e">🧴</div><h3>Tratamentos</h3><p>Cabelo tratado, hidratado e com brilho, com cuidado de verdade.</p><a href="#agendar" data-s="Tratamento capilar">Agendar →</a></div>
-    <div class="svc rv"><div class="e">👰‍♀️</div><h3>Penteados</h3><p>Para festas, formaturas, casamentos e aquele evento especial.</p><a href="#agendar" data-s="Penteado">Agendar →</a></div>
-    <div class="svc rv"><div class="e">💄</div><h3>Maquiagem</h3><p>Make para eventos e ocasiões especiais, inclusive de última hora.</p><a href="#agendar" data-s="Maquiagem">Agendar →</a></div>
-    <div class="svc rv"><div class="e">💅</div><h3>Unhas</h3><p>Manicure, pedicure e manutenção com acabamento caprichado.</p><a href="#agendar" data-s="Unhas">Agendar →</a></div>
-    <div class="svc rv"><div class="e">✨</div><h3>Depilação</h3><p>Depilação sem complicação, de domingo a domingo.</p><a href="#agendar" data-s="Depilação">Agendar →</a></div>
+    <div class="svc rv"><div class="e">💇‍♀️</div><h3>Escova</h3><p>A especialidade da casa: escova linda e duradoura, do jeito que você gosta.</p><a href="#" class="ask" data-s="Escova" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">✂️</div><h3>Corte</h3><p>Corte renovado para mudar o visual ou só manter as pontas em dia.</p><a href="#" class="ask" data-s="Corte" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">🧴</div><h3>Tratamentos</h3><p>Cabelo tratado, hidratado e com brilho, com cuidado de verdade.</p><a href="#" class="ask" data-s="Tratamento capilar" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">👰‍♀️</div><h3>Penteados</h3><p>Para festas, formaturas, casamentos e aquele evento especial.</p><a href="#" class="ask" data-s="Penteado" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">💄</div><h3>Maquiagem</h3><p>Make para eventos e ocasiões especiais, inclusive de última hora.</p><a href="#" class="ask" data-s="Maquiagem" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">💅</div><h3>Unhas</h3><p>Manicure, pedicure e manutenção com acabamento caprichado.</p><a href="#" class="ask" data-s="Unhas" target="_blank" rel="noopener">Tirar dúvida →</a></div>
+    <div class="svc rv"><div class="e">✨</div><h3>Depilação</h3><p>Depilação sem complicação, de domingo a domingo.</p><a href="#" class="ask" data-s="Depilação" target="_blank" rel="noopener">Tirar dúvida →</a></div>
     <div class="svc rv"><div class="e">🛍️</div><h3>Produtos</h3><p>Leve para casa, como o Brilho Perfumado da Escovei.</p><a href="#" class="igl" target="_blank" rel="noopener">Ver no Instagram →</a></div>
   </div>
   <p class="note rv">Valores: consulte pelo <a href="#" class="igl" target="_blank" rel="noopener">Instagram</a> ou no salão · <a href="https://drive.google.com/file/d/1qbaBR2gK_RE8yd4A2BQx6KQ0DqqyEhfP/view" target="_blank" rel="noopener">Ver cardápio de bebidas 🥤</a></p>
@@ -224,33 +213,27 @@ footer a{color:var(--pink);font-weight:600}
   <p class="note rv"><a href="#" class="igl" target="_blank" rel="noopener">Ver mais no Instagram @escovei.vicentepires →</a></p>
 </div></section>
 
-<section id="agendar" class="book"><div class="wrap bk">
+<section id="como-funciona" class="book"><div class="wrap bk">
   <div class="rv">
-    <span class="eyebrow" style="color:#ff8fb3">Agendamento online</span>
-    <h2 class="h2">Garanta seu horário em <em style="color:#ff8fb3">1 minuto</em></h2>
-    <p class="sub">Atendemos sem hora marcada, mas se você quer chegar e ser atendida na hora certa, agende aqui. O pedido chega direto para a equipe, que confirma com você.</p>
+    <span class="eyebrow" style="color:#ff8fb3">Como funciona</span>
+    <h2 class="h2">Aqui é <em style="color:#ff8fb3">sem hora marcada</em>. Sempre.</h2>
+    <p class="sub">Não trabalhamos com agendamento: é só chegar no horário de funcionamento que a nossa equipe atende você. Simples assim.</p>
     <div class="steps">
-      <div class="stp"><span>1</span><div><b>Escolha os serviços</b><p>Pode marcar mais de um.</p></div></div>
-      <div class="stp"><span>2</span><div><b>Escolha o dia e o horário</b><p>Seg a sáb 8h às 20h · Dom 9h às 14h.</p></div></div>
-      <div class="stp"><span>3</span><div><b>Envie e aguarde a confirmação</b><p>Pelo WhatsApp ou Instagram, como preferir.</p></div></div>
+      <div class="stp"><span>1</span><div><b>Escolha o que quer fazer</b><p>Escova, corte, unhas, make… dá para combinar vários na mesma visita.</p></div></div>
+      <div class="stp"><span>2</span><div><b>Venha quando quiser</b><p>Seg a sáb 8h às 20h · Dom 9h às 14h.</p></div></div>
+      <div class="stp"><span>3</span><div><b>Chegou, foi atendida</b><p>Enquanto isso, um café, cappuccino ou drink por nossa conta.</p></div></div>
     </div>
-    <div class="tip">💡 <b>Penteado ou make para evento?</b> Agende com antecedência para garantir a profissional.</div>
+    <div class="tip">💡 <b>Penteado ou make para evento?</b> Também é sem hora marcada, inclusive de última hora. É só vir!</div>
   </div>
-  <div class="form rv">
-    <h3>Agendar horário</h3><p class="fs">Campos com * são obrigatórios</p>
-    <div class="f"><label>Serviços *</label><div class="chips" id="chips"></div></div>
-    <div class="row">
-      <div class="f"><label>Seu nome *</label><input id="nome" placeholder="Nome" autocomplete="name"></div>
-      <div class="f"><label>WhatsApp *</label><input id="tel" placeholder="(61) 9 0000-0000" inputmode="tel" autocomplete="tel"></div>
-    </div>
-    <div class="f"><label>Dia *</label><input type="date" id="data"><div class="hint" id="dhint"></div></div>
-    <div class="f"><label>Horário *</label><div class="slots" id="slots"><div class="hint">Escolha o dia primeiro</div></div></div>
-    <div class="f"><label>Profissional de preferência / observações</label><textarea id="obs" rows="2" placeholder="Ex.: escova modelada, cabelo longo"></textarea></div>
-    <div class="err" id="err"></div>
+  <div class="walk rv">
+    <div class="big">💗</div>
+    <h3>Chegou, foi atendida</h3>
+    <p class="fs">Ficou com dúvida sobre serviços ou valores? Fale com a gente.</p>
+    <div class="today"><small>Hoje</small><span id="todayH"></span></div>
     <div class="sendrow">
-      <button class="btn btn-wa" onclick="enviar('wa')"><svg class="i" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>Enviar pelo WhatsApp</button>
-      <button class="btn btn-ig" onclick="enviar('ig')"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>Enviar pelo Instagram</button>
-      <p class="small" id="igmsg">No Instagram, o pedido é copiado: é só colar na conversa.</p>
+      <a class="btn btn-wa" id="waBtn" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>Falar no WhatsApp</a>
+      <a class="btn btn-ig igl" href="#" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>Chamar no Instagram</a>
+      <a class="btn btn-line" href="#onde" style="color:var(--ink);border-color:var(--line)">📍 Como chegar</a>
     </div>
   </div>
 </div></section>
@@ -282,8 +265,8 @@ footer a{color:var(--pink);font-weight:600}
 
 <section style="padding-top:20px"><div class="wrap"><div class="cta rv">
   <h2>Hoje é dia de se cuidar 💗</h2>
-  <p>Venha sem hora marcada ou garanta seu horário agora.</p>
-  <div class="btns"><a class="btn btn-w" href="#agendar">Agendar horário</a><a class="btn btn-line" href="#onde">Como chegar</a></div>
+  <p>Venha sem hora marcada: chegou, foi atendida.</p>
+  <div class="btns"><a class="btn btn-w" href="#onde">Como chegar</a><a class="btn btn-line igl" href="#" target="_blank" rel="noopener">Instagram</a></div>
 </div></div></section>
 
 <footer><div class="wrap">
@@ -293,16 +276,15 @@ footer a{color:var(--pink);font-weight:600}
 </div></footer>
 
 <a class="fab" id="fab" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg></a>
-<div class="mbar"><a class="btn btn-line igl" href="#" target="_blank" rel="noopener">📸 Instagram</a><a class="btn btn-pink" href="#agendar">📅 Agendar</a></div>
+<div class="mbar"><a class="btn btn-line igl" href="#" target="_blank" rel="noopener">📸 Instagram</a><a class="btn btn-pink" href="#onde">📍 Como chegar</a></div>
 
 <script>
-/* ===== CONFIG: troque aqui o WhatsApp que recebe os agendamentos ===== */
+/* ===== CONFIG: troque aqui o WhatsApp do salão ===== */
 const WHATS='5561998040067';
 const IG='escovei.vicentepires';
 /* ===================================================================== */
-const $=id=>document.getElementById(id);
+const $=id=>document.getElementById(id),pad=n=>String(n).padStart(2,'0');
 const wa=t=>'https://api.whatsapp.com/send?phone='+WHATS+'&text='+encodeURIComponent(t);
-const igLink='https://ig.me/m/'+IG;
 document.querySelectorAll('.igl').forEach(a=>a.href='https://www.instagram.com/'+IG+'/');
 $('igTop').href='https://www.instagram.com/'+IG+'/';
 $('fab').href=wa('Olá! Vim pelo site da Escovei e gostaria de atendimento 💗');
@@ -312,29 +294,10 @@ const HRS={0:[9,14],1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,20]};
  $('status').classList.toggle('open',open);
  $('stxt').textContent=open?`Aberto agora · até ${b}h`:(h<a?`Fechado · abre hoje às ${a}h`:`Fechado · abre amanhã às ${HRS[(d+1)%7][0]}h`);
  document.querySelector(`#hours tr[data-d="${d===0?0:1}"]`).classList.add('today')})();
-/* agenda */
-const SV=['Escova','Corte','Tratamento capilar','Penteado','Maquiagem','Unhas','Depilação'];const sel=new Set();let slot='';
-const drawChips=()=>$('chips').innerHTML=SV.map(s=>`<span class="chip2${sel.has(s)?' on':''}" data-s="${s}">${s}</span>`).join('');
-$('chips').addEventListener('click',e=>{const c=e.target.closest('.chip2');if(!c)return;const s=c.dataset.s;sel.has(s)?sel.delete(s):sel.add(s);drawChips()});
-document.querySelectorAll('.svc a[data-s]').forEach(a=>a.addEventListener('click',()=>{sel.add(a.dataset.s);drawChips()}));drawChips();
-const pad=n=>String(n).padStart(2,'0'),iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
-$('data').min=iso(new Date());const mx=new Date();mx.setDate(mx.getDate()+60);$('data').max=iso(mx);
-$('data').addEventListener('change',()=>{const v=$('data').value;slot='';if(!v)return;const d=new Date(v+'T12:00:00'),[a,b]=HRS[d.getDay()];
- $('dhint').textContent=d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long'})+` · ${a}h às ${b}h`;
- const n=new Date(),today=iso(n)===v,hs=[];for(let h=a;h<b;h++){hs.push(pad(h)+':00');hs.push(pad(h)+':30')}
- $('slots').innerHTML=hs.map(h=>{const[x,y]=h.split(':').map(Number);const past=today&&x*60+y<=n.getHours()*60+n.getMinutes()+30;return `<div class="slot${past?' off':''}" data-h="${h}">${h}</div>`}).join('')});
-$('slots').addEventListener('click',e=>{const s=e.target.closest('.slot');if(!s)return;document.querySelectorAll('.slot').forEach(x=>x.classList.remove('on'));s.classList.add('on');slot=s.dataset.h});
-$('tel').addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,11);if(v.length>6)v=`(${v.slice(0,2)}) ${v.slice(2,v.length-4)}-${v.slice(-4)}`;else if(v.length>2)v=`(${v.slice(0,2)}) ${v.slice(2)}`;e.target.value=v});
-function montar(){const nome=$('nome').value.trim(),tel=$('tel').value.trim(),data=$('data').value,obs=$('obs').value.trim();const miss=[];
- if(!sel.size)miss.push('serviço');if(!nome)miss.push('nome');if(tel.replace(/\D/g,'').length<10)miss.push('WhatsApp');if(!data)miss.push('dia');if(!slot)miss.push('horário');
- if(miss.length){$('err').textContent='Falta preencher: '+miss.join(', ');return null}$('err').textContent='';
- const d=new Date(data+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'2-digit'});const L='━━━━━━━━━━━━━━━';
- let m=`💗 *NOVO AGENDAMENTO - ESCOVEI*\n${L}\n💇‍♀️ *Serviços:* ${[...sel].join(', ')}\n📅 *Dia:* ${d}\n⏰ *Horário:* ${slot}\n${L}\n👤 *Nome:* ${nome}\n📱 *WhatsApp:* ${tel}\n`;
- if(obs)m+=`📝 *Obs.:* ${obs}\n`;m+=`${L}\n✅ Aguardo a confirmação. Obrigada!`;return m}
-async function enviar(via){const m=montar();if(!m)return;
- if(via==='wa'){window.open(wa(m),'_blank');return}
- try{await navigator.clipboard.writeText(m.replace(/\*/g,''));$('igmsg').textContent='✅ Pedido copiado! Cole na conversa do Instagram que abriu.'}catch(e){$('igmsg').textContent='Abra a conversa e envie os dados do agendamento.'}
- window.open(igLink,'_blank')}
+/* hoje + dúvidas por serviço */
+(function(){const d=new Date().getDay(),[a,b]=HRS[d];$('todayH').textContent=`${pad(a)}h às ${b}h · sem hora marcada`})();
+$('waBtn').href=wa('Olá! Vim pelo site da Escovei e tenho uma dúvida 💗');
+document.querySelectorAll('.ask').forEach(a=>a.href=wa(`Olá! Vim pelo site da Escovei e queria saber sobre ${a.dataset.s} 💗`));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
